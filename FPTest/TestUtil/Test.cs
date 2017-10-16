@@ -10,9 +10,9 @@ namespace FPTest.TestUtil
     {
         public static void TEST(Action action)
         {
-            PrintStartLine(action.ToString());
+            PrintStartLine(action.Method.ToString());
             action();
-            PrintEndLine(action.ToString());
+            PrintEndLine(action.Method.ToString());
         }
 
         static void PrintStartLine(string funcName)
@@ -22,7 +22,7 @@ namespace FPTest.TestUtil
 
         static void PrintEndLine(string funcName)
         {
-            Console.WriteLine("------------------------{0} end ------------------------", funcName);
+            Console.WriteLine("------------------------{0} end ------------------------\n", funcName);
         }
     }
 }
